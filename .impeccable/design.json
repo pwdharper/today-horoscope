@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-02T11:24:00Z",
+  "title": "Design System: 오늘의 편지",
+  "extensions": {
+    "colorMeta": {
+      "coral": {
+        "role": "primary",
+        "displayName": "Sunrise Coral",
+        "canonical": "#b84434",
+        "tonalRamp": [
+          "oklch(18% 0.12 29)",
+          "oklch(28% 0.14 29)",
+          "oklch(38% 0.15 29)",
+          "oklch(46% 0.15 29)",
+          "oklch(52% 0.15 29)",
+          "oklch(64% 0.12 29)",
+          "oklch(78% 0.07 29)",
+          "oklch(94% 0.03 29)"
+        ]
+      },
+      "coral-deep": {
+        "role": "primary",
+        "displayName": "Pressed Coral",
+        "canonical": "#a83c2e",
+        "tonalRamp": [
+          "oklch(16% 0.11 28)",
+          "oklch(26% 0.13 28)",
+          "oklch(36% 0.14 28)",
+          "oklch(44% 0.15 28)",
+          "oklch(49% 0.14 28)",
+          "oklch(62% 0.11 28)",
+          "oklch(76% 0.06 28)",
+          "oklch(93% 0.02 28)"
+        ]
+      },
+      "desk": {
+        "role": "neutral",
+        "displayName": "Cooler Desk",
+        "canonical": "#b4c0cc",
+        "tonalRamp": [
+          "oklch(22% 0.025 250)",
+          "oklch(32% 0.022 250)",
+          "oklch(42% 0.02 250)",
+          "oklch(54% 0.018 250)",
+          "oklch(66% 0.016 250)",
+          "oklch(78% 0.014 250)",
+          "oklch(88% 0.01 250)",
+          "oklch(96% 0.006 250)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cool Gray Paper",
+        "canonical": "#e6ecf1",
+        "tonalRamp": [
+          "oklch(20% 0.012 240)",
+          "oklch(32% 0.012 240)",
+          "oklch(44% 0.011 240)",
+          "oklch(56% 0.01 240)",
+          "oklch(70% 0.01 240)",
+          "oklch(82% 0.01 240)",
+          "oklch(93% 0.008 240)",
+          "oklch(97% 0.005 240)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Navy Ink",
+        "canonical": "#17233c",
+        "tonalRamp": [
+          "oklch(16% 0.05 260)",
+          "oklch(25% 0.048 260)",
+          "oklch(34% 0.042 260)",
+          "oklch(46% 0.035 260)",
+          "oklch(58% 0.028 260)",
+          "oklch(72% 0.02 260)",
+          "oklch(86% 0.012 260)",
+          "oklch(95% 0.006 260)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Navy",
+        "canonical": "#31425a",
+        "tonalRamp": [
+          "oklch(18% 0.04 255)",
+          "oklch(28% 0.038 255)",
+          "oklch(36% 0.036 255)",
+          "oklch(48% 0.03 255)",
+          "oklch(60% 0.024 255)",
+          "oklch(74% 0.016 255)",
+          "oklch(86% 0.01 255)",
+          "oklch(95% 0.005 255)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Navy Hairline",
+        "canonical": "color-mix(in srgb, #17233c 16%, transparent)",
+        "tonalRamp": [
+          "oklch(20% 0.04 260)",
+          "oklch(30% 0.032 260)",
+          "oklch(40% 0.026 260)",
+          "oklch(52% 0.02 260)",
+          "oklch(64% 0.014 260)",
+          "oklch(76% 0.01 260)",
+          "oklch(88% 0.006 260)",
+          "oklch(96% 0.003 260)"
+        ]
+      },
+      "clip-metal": {
+        "role": "neutral",
+        "displayName": "Clip Metal",
+        "canonical": "#8b97a6",
+        "tonalRamp": [
+          "oklch(22% 0.02 250)",
+          "oklch(32% 0.02 250)",
+          "oklch(42% 0.018 250)",
+          "oklch(52% 0.016 250)",
+          "oklch(62% 0.016 250)",
+          "oklch(72% 0.014 250)",
+          "oklch(84% 0.01 250)",
+          "oklch(94% 0.006 250)"
+        ]
+      },
+      "clip-metal-deep": {
+        "role": "neutral",
+        "displayName": "Clip Metal Deep",
+        "canonical": "#6d7888",
+        "tonalRamp": [
+          "oklch(20% 0.022 250)",
+          "oklch(30% 0.02 250)",
+          "oklch(40% 0.02 250)",
+          "oklch(50% 0.018 250)",
+          "oklch(58% 0.016 250)",
+          "oklch(70% 0.012 250)",
+          "oklch(82% 0.008 250)",
+          "oklch(94% 0.004 250)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Home headline only. 2rem, 2.35rem from sm. Max 12ch."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Letter greeting and error title. 1.75rem, 2rem from sm. Max 18ch."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Sheet masthead product name at 15px semibold."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Dek, help, advice, and stamp label at 16px / 1.75."
+      },
+      "letter": {
+        "displayName": "Letter",
+        "purpose": "Letter paragraphs at 17px / 1.75, max 65ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels, dates, help, and errors at 13px."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet-rest",
+        "value": "0 18px 40px color-mix(in srgb, #17233c 12%, transparent)",
+        "purpose": "Ambient drop under the paper sheet on the desk."
+      },
+      {
+        "name": "clip-rest",
+        "value": "0 8px 16px color-mix(in srgb, #17233c 22%, transparent)",
+        "purpose": "Tighter drop under the clipboard clip only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-letter",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Letter entry. 0.45s fade and 14px rise; skip travel when reduced motion."
+      },
+      {
+        "name": "color-swap",
+        "value": "background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease",
+        "purpose": "Stamp hover, underline focus, and quiet-link hover."
+      },
+      {
+        "name": "stamp-press",
+        "value": "transform 0.1s ease",
+        "purpose": "Stamp active scale 0.98."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Stamp Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Sunrise-coral stamp. The only filled action on the sheet.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">오늘의 편지 받기</button>",
+      "css": ".ds-btn-primary { display: block; width: 100%; height: 52px; padding: 0 32px; background: #b84434; color: #e6ecf1; border: 0; border-radius: 0; font-family: \"Pretendard Variable\", Pretendard, sans-serif; font-size: 16px; font-weight: 600; line-height: 1.75; letter-spacing: normal; cursor: pointer; transition: background-color 0.15s ease, transform 0.1s ease; } .ds-btn-primary:hover { background: #a83c2e; } .ds-btn-primary:active { transform: scale(0.98); } .ds-btn-primary:focus-visible { outline: 2px solid #b84434; outline-offset: 4px; } .ds-btn-primary:disabled { background: #31425a; color: #e6ecf1; cursor: not-allowed; transform: none; }"
+    },
+    {
+      "name": "Underline Field",
+      "kind": "input",
+      "refersTo": "input-underline",
+      "description": "Transparent ink underline. Coral rule on focus; coral copy on error.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">이름</span><input class=\"ds-input-underline\" type=\"text\" value=\"하루\" /><span class=\"ds-field-help\">편지에 적힐 이름입니다.</span></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 8px; font-family: \"Pretendard Variable\", Pretendard, sans-serif; } .ds-field-label { font-size: 13px; font-weight: 500; line-height: 1.54; color: #17233c; } .ds-input-underline { height: 44px; width: 100%; margin: 0; padding: 0; border: 0; border-bottom: 1px solid #17233c; border-radius: 0; background: transparent; color: #17233c; font-family: inherit; font-size: 16px; line-height: 1.75; outline: none; transition: border-color 0.15s ease; } .ds-input-underline:focus, .ds-input-underline:focus-visible { border-bottom-color: #b84434; outline: none; } .ds-field-help { font-size: 13px; font-weight: 400; line-height: 1.54; color: #31425a; }"
+    },
+    {
+      "name": "Paper Sheet",
+      "kind": "card",
+      "refersTo": "sheet-paper",
+      "description": "Sharp cool-gray brief on the desk. One hairline, one ambient drop.",
+      "html": "<div class=\"ds-sheet\"><header class=\"ds-sheet-head\"><p class=\"ds-sheet-name\">오늘의 편지</p><time class=\"ds-sheet-date\">2026년 9월 2일 수요일</time></header><p class=\"ds-sheet-body\">이름과 태어난 날을 적으면 오늘 하루의 편지를 엽니다.</p></div>",
+      "css": ".ds-sheet { background: #e6ecf1; color: #17233c; border: 1px solid color-mix(in srgb, #17233c 16%, transparent); border-radius: 0; padding: 56px 24px 40px; box-shadow: 0 18px 40px color-mix(in srgb, #17233c 12%, transparent); font-family: \"Pretendard Variable\", Pretendard, sans-serif; } .ds-sheet-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin: 0 0 40px; padding: 0 0 16px; border-bottom: 1px solid color-mix(in srgb, #17233c 16%, transparent); } .ds-sheet-name { margin: 0; font-size: 15px; font-weight: 600; letter-spacing: -0.025em; color: #17233c; } .ds-sheet-date { font-size: 13px; line-height: 1.54; color: #31425a; text-align: right; } .ds-sheet-body { margin: 0; max-width: 36ch; font-size: 16px; line-height: 1.75; color: #31425a; }"
+    },
+    {
+      "name": "Clipboard Clip",
+      "kind": "custom",
+      "refersTo": "sheet-paper",
+      "description": "Metal tab overlapping the sheet’s top edge. Hardware radius only.",
+      "html": "<div class=\"ds-clip-stage\"><div class=\"ds-clip\" aria-hidden=\"true\"><span class=\"ds-clip-rivet\"></span></div><div class=\"ds-clip-sheet\"></div></div>",
+      "css": ".ds-clip-stage { position: relative; padding-top: 18px; } .ds-clip { position: absolute; left: 50%; top: 0; z-index: 2; width: 38px; height: 52px; transform: translate(-50%, 0); border-radius: 3px; background: linear-gradient(180deg, #8b97a6 0%, #6d7888 100%); box-shadow: 0 8px 16px color-mix(in srgb, #17233c 22%, transparent); } .ds-clip-rivet { position: absolute; left: 50%; top: 9px; width: 10px; height: 10px; transform: translateX(-50%); border-radius: 50%; background: color-mix(in srgb, #17233c 28%, #8b97a6); } .ds-clip-sheet { height: 72px; background: #e6ecf1; border: 1px solid color-mix(in srgb, #17233c 16%, transparent); border-radius: 0; box-shadow: 0 18px 40px color-mix(in srgb, #17233c 12%, transparent); }"
+    },
+    {
+      "name": "Sheet Header",
+      "kind": "nav",
+      "refersTo": "sheet-paper",
+      "description": "Masthead row: product name left, Seoul long date right, hairline under.",
+      "html": "<header class=\"ds-masthead\"><p class=\"ds-masthead-name\">오늘의 편지</p><time class=\"ds-masthead-date\">2026년 9월 2일 수요일</time></header>",
+      "css": ".ds-masthead { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 0 0 16px; border-bottom: 1px solid color-mix(in srgb, #17233c 16%, transparent); font-family: \"Pretendard Variable\", Pretendard, sans-serif; } .ds-masthead-name { margin: 0; font-size: 15px; font-weight: 600; letter-spacing: -0.025em; color: #17233c; } .ds-masthead-date { font-size: 13px; line-height: 1.54; color: #31425a; text-align: right; }"
+    },
+    {
+      "name": "Quiet Link",
+      "kind": "nav",
+      "refersTo": "link-quiet",
+      "description": "Return to the form. Ink type, hairline underline, coral on hover.",
+      "html": "<a class=\"ds-link-quiet\" href=\"#\">다른 이름으로 보기</a>",
+      "css": ".ds-link-quiet { display: inline-flex; width: fit-content; align-items: center; color: #17233c; font-family: \"Pretendard Variable\", Pretendard, sans-serif; font-size: 15px; font-weight: 500; line-height: 1.2; text-decoration: underline; text-decoration-color: color-mix(in srgb, #17233c 16%, transparent); text-underline-offset: 4px; transition: color 0.15s ease; } .ds-link-quiet:hover { color: #b84434; } .ds-link-quiet:focus-visible { outline: 2px solid #b84434; outline-offset: 4px; }"
+    },
+    {
+      "name": "Advice Line",
+      "kind": "custom",
+      "refersTo": "sheet-paper",
+      "description": "Closing counsel under a hairline. Same ink as the letter, 16px.",
+      "html": "<p class=\"ds-advice\">오늘은 서두르지 말고, 한 가지를 끝까지 밀어 보세요.</p>",
+      "css": ".ds-advice { margin: 0; max-width: 65ch; padding-top: 24px; border-top: 1px solid color-mix(in srgb, #17233c 16%, transparent); color: #17233c; font-family: \"Pretendard Variable\", Pretendard, sans-serif; font-size: 16px; font-weight: 400; line-height: 1.75; }"
+    },
+    {
+      "name": "Letter Skeleton",
+      "kind": "custom",
+      "refersTo": "sheet-paper",
+      "description": "Loading as letter-shaped ink washes on the paper. No spinner.",
+      "html": "<div class=\"ds-skeleton\" aria-hidden=\"true\"><span class=\"ds-skeleton-bar ds-skeleton-bar--title\"></span><span class=\"ds-skeleton-bar ds-skeleton-bar--date\"></span><span class=\"ds-skeleton-bar\"></span><span class=\"ds-skeleton-bar ds-skeleton-bar--94\"></span><span class=\"ds-skeleton-bar ds-skeleton-bar--88\"></span><span class=\"ds-skeleton-bar ds-skeleton-bar--advice\"></span></div>",
+      "css": ".ds-skeleton { display: flex; flex-direction: column; gap: 12px; } .ds-skeleton-bar { display: block; height: 16px; width: 100%; background: color-mix(in srgb, #17233c 9%, transparent); animation: ds-pulse 1.6s ease-in-out infinite; } .ds-skeleton-bar--title { height: 32px; width: 80%; background: color-mix(in srgb, #17233c 10%, transparent); margin-bottom: 12px; } .ds-skeleton-bar--date { width: 8rem; height: 16px; background: color-mix(in srgb, #17233c 8%, transparent); margin-bottom: 8px; } .ds-skeleton-bar--94 { width: 94%; } .ds-skeleton-bar--88 { width: 88%; } .ds-skeleton-bar--advice { width: 60%; margin-top: 16px; background: color-mix(in srgb, #17233c 10%, transparent); } @keyframes ds-pulse { 50% { opacity: 0.45; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Dawn Clipboard",
+    "overview": "The surface is a photocopied morning brief clipped to a metal clip, sitting on a cooler desk. The visitor fills two underline fields on cool gray paper, then reads today's letter on the same sheet. Depth is physical: grain on the desk, one paper plane, one clip. The type is Pretendard only — a Korean morning face, not a night-sky serif.\n\nPersonality is quiet, cool, and clerical. Density is a single sheet, not a dashboard. The only warm mark is a sunrise-coral stamp for the primary action; navy ink does the rest. Confirmed visual rejections: night-sky zodiac templates, cream-and-serif defaults, purple glow, and star-wheel chrome.",
+    "keyCharacteristics": [
+      "Cool gray paper on a cooler blue-gray desk, sheet offset left on large screens",
+      "Navy ink hairlines; one coral stamp (plus coral for focus and error)",
+      "Pretendard Variable only; semibold headlines, regular body",
+      "Sharp sheet and stamp; underline fields, not boxes",
+      "Form and letter share one clipboard frame; width is the only layout change"
+    ],
+    "rules": [
+      {
+        "name": "The One Stamp Rule",
+        "body": "Coral is the only chromatic accent. It marks the stamp, focus, error, and a dawn wash on the desk. It does not color headlines, letter body, or sheet chrome.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cool Paper Rule",
+        "body": "Backgrounds stay in the desk–paper pair. Do not introduce cream, white, or night-sky fills.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Face Rule",
+        "body": "Pretendard Variable is the only type family. Do not pair a serif for the letter or a mono for the date.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tight Title Rule",
+        "body": "Headlines and the masthead use semibold and tight tracking. Body and letter stay regular with open leading. Do not bold the letter paragraphs.",
+        "section": "typography"
+      },
+      {
+        "name": "The Same Sheet Rule",
+        "body": "/ and /fortune share one clipboard frame. Change width and contents; do not invent a second surface.",
+        "section": "layout"
+      },
+      {
+        "name": "The One Plane Rule",
+        "body": "One sheet, one clip, one desk. Do not stack additional elevated cards on the paper.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Sharp Sheet Rule",
+        "body": "Paper and stamp stay square. Radius is hardware, not UI.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Underline Field Rule",
+        "body": "Inputs are transparent with a bottom ink rule. No filled wells, no 1px boxes.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep form and letter on the same clipboard sheet; switch only width (28rem / 40rem).",
+      "Do put the coral stamp under the underline fields, full width, 52px tall.",
+      "Do set copy in Korean, in Pretendard, with navy ink on cool gray paper.",
+      "Do divide the advice line with a hairline, not a card or a chip.",
+      "Do show loading as letter-shaped skeleton bars on the sheet."
+    ],
+    "donts": [
+      "Don't introduce a night-sky, cream, or serif world — no gold stars, purple glow, or zodiac wheel.",
+      "Don't box the inputs or round the sheet and stamp.",
+      "Don't use coral on headlines, masthead, or letter body.",
+      "Don't add a marketing landing in front of the form, or a second elevated card on the paper.",
+      "Don't show star signs, share chrome, or login on these surfaces."
+    ]
+  }
+}
