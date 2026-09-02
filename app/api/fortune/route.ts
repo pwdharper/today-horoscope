@@ -1,9 +1,12 @@
 import {
-  buildMockFortune,
-  validateFortuneRequest,
-  type FortuneRequest,
-} from "@/lib/fortune";
+  FortuneConfigError,
+  FortuneGenerationError,
+  generateFortuneLetter,
+} from "@/lib/generate-fortune";
 import { seoulIsoDate } from "@/lib/date";
+import { validateFortuneRequest, type FortuneRequest } from "@/lib/fortune";
+
+export const maxDuration = 30;
 
 export async function POST(request: Request) {
   let payload: FortuneRequest;
@@ -27,7 +30,16 @@ export async function POST(request: Request) {
     return Response.json({ error: "invalid-input", errors }, { status: 400 });
   }
 
-  await new Promise((resolve) => setTimeout(resolve, 520));
-
-  return Response.json(buildMockFortune(payload.name, payload.birthdate));
+  try {
+    const letter = await generateFortuneLetter(payload.name, payload.birthdate);
+    return Response.json(letter);
+  } catch (error) {
+    if (error instanceof FortuneConfigError) {
+      return Response.json({ error: "missing-api-key" }, { status: 500 });
+    }
+    if (error instanceof FortuneGenerationError) {
+      return Response.json({ error: "fortune-failed" }, { status: 502 });
+    }
+    return Response.json({ error: "fortune-failed" }, { status: 502 });
+  }
 }
