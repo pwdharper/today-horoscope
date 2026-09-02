@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { FortuneError, FortuneLetter } from "@/components/FortuneLetter";
 import { LetterSkeleton } from "@/components/LetterSkeleton";
+import { LogoutButton } from "@/components/LogoutButton";
 import { SheetFrame } from "@/components/SheetFrame";
 import {
   REQUEST_STORAGE_KEY,
@@ -34,6 +35,9 @@ async function requestFortune(payload: FortuneRequest): Promise<FortuneResponse>
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
+  if (response.status === 401) {
+    throw Object.assign(new Error("unauthorized"), { code: "unauthorized" });
+  }
   if (!response.ok) throw new Error("fortune-failed");
   return (await response.json()) as FortuneResponse;
 }
@@ -57,8 +61,13 @@ export function FortuneView() {
       .then((letter) => {
         if (!cancelled) setState({ status: "ready", letter });
       })
-      .catch(() => {
-        if (!cancelled) setState({ status: "error" });
+      .catch((error: { code?: string }) => {
+        if (cancelled) return;
+        if (error?.code === "unauthorized") {
+          router.replace("/login");
+          return;
+        }
+        setState({ status: "error" });
       });
 
     return () => {
@@ -67,7 +76,7 @@ export function FortuneView() {
   }, [router]);
 
   return (
-    <SheetFrame width="letter">
+    <SheetFrame width="letter" tools={<LogoutButton />}>
       {state.status === "loading" ? (
         <>
           <p className="sr-only">편지를 여는 중입니다.</p>
@@ -83,7 +92,13 @@ export function FortuneView() {
             setState({ status: "loading" });
             requestFortune(payload)
               .then((letter) => setState({ status: "ready", letter }))
-              .catch(() => setState({ status: "error" }));
+              .catch((error: { code?: string }) => {
+                if (error?.code === "unauthorized") {
+                  router.replace("/login");
+                  return;
+                }
+                setState({ status: "error" });
+              });
           }}
         />
       ) : null}

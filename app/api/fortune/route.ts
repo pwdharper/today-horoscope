@@ -5,10 +5,17 @@ import {
 } from "@/lib/generate-fortune";
 import { seoulIsoDate } from "@/lib/date";
 import { validateFortuneRequest, type FortuneRequest } from "@/lib/fortune";
+import { createClient } from "@/lib/supabase/server";
 
 export const maxDuration = 30;
 
 export async function POST(request: Request) {
+  const supabase = await createClient();
+  const { data } = await supabase.auth.getClaims();
+  if (!data?.claims) {
+    return Response.json({ error: "unauthorized" }, { status: 401 });
+  }
+
   let payload: FortuneRequest;
 
   try {

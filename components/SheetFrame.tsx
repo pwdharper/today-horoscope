@@ -4,9 +4,10 @@ import { formatSeoulDate } from "@/lib/date";
 type SheetFrameProps = {
   children: ReactNode;
   width?: "form" | "letter";
+  tools?: ReactNode;
 };
 
-export function SheetFrame({ children, width = "form" }: SheetFrameProps) {
+export function SheetFrame({ children, width = "form", tools }: SheetFrameProps) {
   const dateLabel = formatSeoulDate();
   const widthClass = width === "letter" ? "max-w-[40rem]" : "max-w-[28rem]";
 
@@ -28,7 +29,10 @@ export function SheetFrame({ children, width = "form" }: SheetFrameProps) {
           <div className="relative z-[1] border border-hairline bg-paper px-6 pb-10 pt-14 shadow-[0_18px_40px_color-mix(in_srgb,var(--ink)_12%,transparent)] sm:px-9 sm:pb-12 sm:pt-16">
             <header className="mb-10 flex items-baseline justify-between gap-4 border-b border-hairline pb-4">
               <p className="text-[15px] font-semibold tracking-tight text-ink">오늘의 편지</p>
-              <time className="text-right text-[13px] leading-5 text-ink-soft">{dateLabel}</time>
+              <div className="flex items-baseline gap-4">
+                {tools}
+                <time className="text-right text-[13px] leading-5 text-ink-soft">{dateLabel}</time>
+              </div>
             </header>
             {children}
           </div>

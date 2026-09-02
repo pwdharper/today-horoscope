@@ -10,11 +10,12 @@ import {
 
 type FortuneFormProps = {
   todayIso: string;
+  defaultName?: string;
 };
 
-export function FortuneForm({ todayIso }: FortuneFormProps) {
+export function FortuneForm({ todayIso, defaultName = "" }: FortuneFormProps) {
   const router = useRouter();
-  const [name, setName] = useState("");
+  const [name, setName] = useState(defaultName);
   const [birthdate, setBirthdate] = useState("");
   const [errors, setErrors] = useState<FieldErrors>({});
   const [submitting, setSubmitting] = useState(false);
